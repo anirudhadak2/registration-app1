@@ -15,7 +15,7 @@ on jenkins slave node add user and take ssh-copy-id from jenkins master node
 install the java-jdk , maven package , tomcat server on jenkins slave node and configure the users on the tomcat config file 
 
  cat vi  /etc/tomcat9/tomcat-users.xml
-
+<h5>
  <role rolename="admin-gui"/>
  <role rolename="manager-gui"/>
 <user username="tomcat" password="pass" roles="manager-script,admin-gui,manager-gui,admin-script" />
@@ -29,6 +29,7 @@ install the java-jdk , maven package , tomcat server on jenkins slave node and c
  <user username="deployer" password="deployer" roles="manager-script, manager-gui, manager-jmx, manager-status, admin-gui, admin-script, "/>
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
 
+</h5>
 -----------------
 jenkins and tomcat both are accessible  on port 8080
 so allow to jenkins node port 8080  for tomcat server 
